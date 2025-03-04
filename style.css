@@ -17,6 +17,9 @@ input {
 li {
     list-style: none;
 }
+body{
+    overflow-x:hidden;
+}
 
 .hader {
     width: 100%;
@@ -78,12 +81,14 @@ li {
 }
 
 .bars {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: relative;
     display: none;
     opacity: 0;
     cursor: pointer;
+    bottom: 0.5rem;
+    transform: scale(0.8);
 }
 
 .bars span {
@@ -156,6 +161,7 @@ li {
         width: 90%;
         height: fit-content;
         top: -100rem;
+        right: 1rem;
         position: absolute;
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -282,12 +288,11 @@ li {
     height: 100vh;
     position: absolute;
     z-index: -1;
-    overflow-x: hidden;
 }
 .baner-bg img{
     position: absolute;
-    top: -30%;
-    right:0%;
+    top: -40%;
+    right:10%;
 }
 @media only screen and (max-width:1316px) {
     .baner {
@@ -326,6 +331,9 @@ li {
         top: -10%;
         right: -60%;
     }
+    .baner-bg{
+        display: none;
+    }
 }
 @media only screen and (max-width:513px) {
     .baner-lable-1{
@@ -344,12 +352,149 @@ li {
     }
     .baner-bg img{
         top: -20%;
-        right: -90%;
+        right: -0%;
     }
+
 }
 @media only screen and (max-width:458px) {
     .baner-bg img{
         top: -20%;
         right: -120%;
     }
+}
+/* manage */
+.manage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 6rem;
+    gap: 3rem;
+    justify-content: space-between;
+}
+.manage-blog-1-lable-1{
+    color: #2A385D;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.manage-blog-1-lable-2{
+    color: #96969E;
+    font-weight:400;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.about-lable-2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: end;
+}
+.about-lable-2-blog-1{
+    width: 70%;
+    display: flex;
+    gap: 2rem;
+}
+.about-lable-2-blog-1-number{
+    width: 100%;
+    height: 35px;
+    background-color: #F1613E;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-lable-2-blog-1-lable-1{
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.about-lable-2-blog-1-lable-2{
+    font-size: 0.9rem;
+    color: #AAAAB2;
+}
+.about-number-lable{
+    display: none;
+}
+.about-number{
+    width: 50%;
+}
+@media only screen and (max-width:1316px) {
+    .manage{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+@media only screen  and (max-width:1010px){
+    .manage{
+        flex-direction: column;
+        padding-right: 0;
+    }
+    .about-lable-2{
+        gap: 4rem;
+    }
+    .about-lable-2-blog-1{
+        width: 100%;
+        height: 20%;
+        flex-direction: column;
+    }
+    .about-lable-2-blog-1-number{
+        width: 100%;
+    }
+    .about-number{
+        width: 100%;
+        display: flex;
+    }
+    .about-number-lable{
+        width: 80%;
+        height: 100%;
+        display: block;
+        font-size: 1rem;
+        color: #000;
+        background-color: #FFF0EB;
+        padding-left: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    .about-lable-2-blog-1-number{
+        width: 20%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .about-lable-2-blog-1-lable-1{
+        display: none;
+    }
+}
+@media only screen and (max-width:400px) {
+    .about-number-lable{
+        font-size: 0.9rem;
+    }
+    .manage-blog-1-lable-2{
+        text-align: center;
+    }
+    .manage-blog-1-lable-1{
+        text-align: center;
+    }
+}
+/* galery */
+.swiper {
+    width: 80%;
+    height: 300px;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    height: 250px;
+}
+.swiper-slide{
+    width: 400px;
+}
+.swiper-wrapper{
+    padding-left: 7rem;
 }
